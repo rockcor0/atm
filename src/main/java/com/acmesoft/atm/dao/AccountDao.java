@@ -1,9 +1,9 @@
-package com.acmesoft.atm.services;
+package com.acmesoft.atm.dao;
 
 import com.acmesoft.atm.dto.GenericResponse;
 import com.acmesoft.atm.model.Account;
 
-public interface AccountService {
+public interface AccountDao {
     void save(Account account);
     GenericResponse deposit(Long accountId);
     void withdraw(Long accountId);

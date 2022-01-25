@@ -1,16 +1,11 @@
-package com.acmesoft.atm.services;
+package com.acmesoft.atm.dao;
 
-import com.acmesoft.atm.dao.AccountDao;
 import com.acmesoft.atm.dto.GenericResponse;
 import com.acmesoft.atm.model.Account;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
-@Service("accountService")
-public class AccountServiceImp implements AccountService{
-
-    @Autowired
-    private AccountDao _accountDao;
+@Repository
+public class AccountDaoImp implements AccountDao{
 
     @Override
     public void save(Account account) {
@@ -19,7 +14,7 @@ public class AccountServiceImp implements AccountService{
 
     @Override
     public GenericResponse deposit(Long accountId) {
-        return _accountDao.deposit(accountId);
+        return new GenericResponse(true, "Operacion Exitosa");
     }
 
     @Override
