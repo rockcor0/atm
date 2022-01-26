@@ -1,10 +1,20 @@
 package com.acmesoft.atm.model;
 
-public class Account {
+import lombok.Getter;
+
+import java.io.Serializable;
+
+@Getter
+public class Account implements Serializable {
+
     private Long id;
+
     private String name;
 
-    public Long getId(){
-        return this.id;
+    private Double balance;
+
+    public Account(Long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 }
