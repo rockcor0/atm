@@ -6,15 +6,12 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class GenericRequest {
+public class AccountRequest {
 
     @NotNull
     private Long id;
 
     private String name;
 
-    public GenericRequest(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    private String balance;
 }
