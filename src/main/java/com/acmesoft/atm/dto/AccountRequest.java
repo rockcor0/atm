@@ -1,8 +1,9 @@
 package com.acmesoft.atm.dto;
 
 import lombok.Getter;
-import javax.validation.constraints.NotNull;
 import lombok.Setter;
+
+import javax.validation.constraints.NotNull;
 
 @Setter
 @Getter

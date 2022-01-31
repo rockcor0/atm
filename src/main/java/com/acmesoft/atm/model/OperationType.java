@@ -1,5 +1,5 @@
 package com.acmesoft.atm.model;
 
-public enum Type {
+public enum OperationType {
     TRANSFER, DEPOSIT, WITHDRAW;
 }
