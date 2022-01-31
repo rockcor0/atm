@@ -4,16 +4,20 @@ import com.acmesoft.atm.model.Account;
 
 import java.util.List;
 
-public interface AccountService {
+public interface AccountService<S> {
 
-    Account save(Account account);
+    S save(S account);
 
-    Account update(Account account);
+    S update(S account);
 
-    Account deposit(Account account);
+    S deposit(S account);
 
-    List<Account> getAll();
+    List<S> getAll();
 
-    Account findById(long accountId);
+    S findById(long accountId);
+
+    void delete(long accountId);
+
+    List<S> transfer(S originId, S destinationId, double amount);
 
 }
